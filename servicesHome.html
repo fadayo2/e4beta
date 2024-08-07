@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>services - Home care support</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="aboutUs.css"> -->
+    <link rel="stylesheet" href="servH.css">
+    <link rel="shortcut icon" href="favicon (3).ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <!-- custom cursor  -->
+
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-trail"></div>
+
+    <!-- custom cursor -->
+
+    <nav id="navbar" class="navbar">
+        <a class="logo" href="/"><img src="e4 original logo.png" alt="" width="100"></a>
+
+        <div class="navLinks">
+            <a style="text-decoration: none;" href="/"><div class="link">Home</div></a>
+            <a style="text-decoration: none;" href="aboutUs"><div class="link">About Us</div></a>
+            <div onclick="serv()" class="link dropdown" style="color: #14a0f7;">Services
+                    <div class="dropdown-content">
+                        <a href="servicesAged">Aged care residential facility and hospitals</a>
+                        <a href="servicesComm">Community care/Respite support</a>
+                        <a href="servicesHome">Home care support</a>
+                        <a href="servicesMental"> Mental health support programs</a>
+                        <a href="serviceDisable"> Disability care support</a>
+                    </div>
+            </div>
+            <a style="text-decoration: none;" href="joinUs"><div class="link">Join Us</div></a>
+            <a style="text-decoration: none;" href="contact"><div class="link">Contact Us</div></a>
+        </div>
+
+        <button onclick="dialNumber('0411156749')" class="red-button">0411 156 749</button>
+        
+        <i onclick="drpD()" class="fa-solid fa-bars" id="menu"></i>
+        <i onclick="drpU()" class="fa-solid fa-xmark" id="cancel"></i>
+
+    </nav>
+
+    <div id="drpdown" class="drpDiv">
+        <a style="text-decoration: none;color: var(--color2);" href="/"><div class="link">Home</div></a>
+        <a style="text-decoration: none;color: black;" href="aboutUs"><div class="link">About us</div></a>
+        <div onclick="drpdrp()" class="link">Services <i id="arrow" class="fa-solid fa-caret-down"></i></div>
+        <!-- <i class="fa fa-arrow-down" aria-hidden="true"></i> -->
+        <div id="drpdrp" class="drpdrp">
+            <a style="text-decoration: none;color: black;" href="servicesAged">Aged care residential facility <br> and hospitals</a>
+            <a style="text-decoration: none;color: black;" href="servicesComm">Community care/Respite support</a>
+            <a style="text-decoration: none;color: black;" href="servicesHome">Home care support</a>
+            <a style="text-decoration: none;color: black;" href="servicesMental"> Mental health support programs</a>
+            <a style="text-decoration: none;color: black;" href="serviceDisable"> Disability care support</a>
+        </div>
+        <a style="text-decoration: none;color: black;" href="joinUs"><div class="link">Join us</div></a>
+        <a style="text-decoration: none;color: black;" href="contact"><div class="link">Contact us</div></a>
+        <button onclick="dialNumber('0411156749')" class="red-button2">0411 156 749</button>
+    </div>
+
+    <section class="__herosection"> 
+        <img src="HOMECAREJJ.jpg" alt="">
+        <div class="__txt">
+            <h1>Home Care Support</h1>
+        </div>
+    </section>
+
+    <main class="main">
+        <div class="maindiv">
+            <div class="im">
+                <img src="home1.jpg" alt="" width="">
+            </div>
+            <div class="mtt">
+                <div class="mainTxt">
+                    <span>➤</span>
+                    <h1>Promoting independence through friendly and highly experienced staff.</h1>
+                </div>
+                <hr>
+                <div class="mainTxt">
+                    <span>➤</span>
+                    <h1>Providing personalized care and services to meet the unique needs and goals of each client.</h1>
+                </div>
+            </div>
+        </div>
+        <div class="maindiv mt">
+            <div class="im">
+                <img src="home3.jpg" alt="" width="">
+            </div>
+            <div class="mtt">
+                <div class="mainTxt">
+                    <span>➤</span>
+                    <h1>Ensuring clients remain safe, independent, and connected within their communities.</h1>
+                </div>
+                <hr>
+                <div class="mainTxt">
+                    <span>➤</span>
+                    <h1>Focusing on improving overall health and well-being.</h1>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="contactUs">
+        <div class="contactUsDiv">
+            <h1>We Care with Love and Respect</h1>
+            <p>Our Team is Here To Help.</p>
+            <button onclick="contact()">Contact Us</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footerContext">
+            <div class="services">
+                <img src="e4 original logo white.png" alt="" width="150">
+                <p>e4 Healthcare Services is dedicated to delivering outstanding services, ensuring comprehensive engagement with our clients and their families in every facet of their care. Our exceptional team is the cornerstone of our service, with their well-being and career progression being our priority. Our competitive edge is defined by the superior care we provide to our clients and their families and our unwavering commitment to our staff’s well-being and advancement.</p>
+            </div>
+            <div class="services">
+                <h2>Services</h2>
+                <hr>
+                <div class="fs">
+                    <a href="servicesAged">Aged Care Residential Facilities and Hospitals</a>
+                    <a href="servicesComm">Community Care/Respite Support</a>
+                    <a href="servicesHome">Home Care Support</a>
+                    <a href="servicesMental">Mental Health Support Programs</a>
+                    <a href="serviceDisable">Disability Care Support</a>
+                </div>
+            </div>
+            <div class="contact">
+                <h2>Contact</h2>
+                <hr>
+                <div class="fs">
+                    <p>For all staff bookings and general inquiries, please call 0411 156 749. Alternatively, you can email your request or inquiry to admin@e4healthcare.info. We’re here to assist you with your healthcare staffing needs.</p> <br>
+                    <p>Monday to Friday: 8:30am- 6pm</p> <br>
+                    <p>Monday to Sunday: 24-hour Staff Bookings Only</p>
+                </div>
+                <div class="links">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                    <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+        </div>  
+        <hr>
+        <div class="lstDiv">
+            <p>© Copyright 2024 | All Rights Reserved by e4Healthcare</p>
+        </div>
+    </footer>
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>

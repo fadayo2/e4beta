@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e4Healthcare Services Pty Ltd</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+    <link rel="shortcut icon" href="favicon (3).ico" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- custom cursor  -->
+
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-trail"></div>
+
+    <!-- custom cursor -->
+
+    <nav id="navbar" class="navbar">
+        <a class="logo" href="/"><img src="e4 original logo.png" alt="" width="100"></a>
+
+        <div class="navLinks">
+            <a style="text-decoration: none;" href="/"><div style="color: #14a0f7;" class="link">Home</div></a>
+            <a style="text-decoration: none;" href="aboutUs"><div class="link">About Us</div></a>
+            <div onclick="serv()" class="link dropdown">Services
+                    <div class="dropdown-content">
+                        <a href="servicesAged">Aged care residential facility and hospitals</a>
+                        <a href="servicesComm">Community care/Respite support</a>
+                        <a href="servicesHome">Home care support</a>
+                        <a href="servicesMental"> Mental health support programs</a>
+                        <a href="serviceDisable"> Disability care support</a>
+                    </div>
+            </div>
+            <a style="text-decoration: none;" href="joinUs"><div class="link">Join Us</div></a>
+            <a style="text-decoration: none;" href="contact"><div class="link">Contact Us</div></a>
+        </div>
+
+        <button onclick="dialNumber('0411156749')" class="red-button">0411 156 749</button>
+        
+        <i onclick="drpD()" class="fa-solid fa-bars" id="menu"></i>
+        <i onclick="drpU()" class="fa-solid fa-xmark" id="cancel"></i>
+
+    </nav>
+
+    <div id="drpdown" class="drpDiv">
+        <a style="text-decoration: none;color: var(--color2);" href="/"><div class="link">Home</div></a>
+        <a style="text-decoration: none;color: black;" href="aboutUs"><div class="link">About us</div></a>
+        <div onclick="drpdrp()" class="link">Services <i id="arrow" class="fa-solid fa-caret-down"></i></div>
+        <!-- <i class="fa fa-arrow-down" aria-hidden="true"></i> -->
+        <div id="drpdrp" class="drpdrp">
+            <a style="text-decoration: none;color: black;" href="servicesAged">Aged care residential facility <br> and hospitals</a>
+            <a style="text-decoration: none;color: black;" href="servicesComm">Community care/Respite support</a>
+            <a style="text-decoration: none;color: black;" href="servicesHome">Home care support</a>
+            <a style="text-decoration: none;color: black;" href="servicesMental"> Mental health support programs</a>
+            <a style="text-decoration: none;color: black;" href="serviceDisable"> Disability care support</a>
+        </div>
+        <a style="text-decoration: none;color: black;" href="joinUs"><div class="link">Join us</div></a>
+        <a style="text-decoration: none;color: black;" href="contact"><div class="link">Contact us</div></a>
+        <button onclick="dialNumber('0411156749')" class="red-button2">0411 156 749</button>
+    </div>
+
+    <section class="herosection">
+        <div>
+            <div>
+                <div>
+                    <video class="vid" loop muted autoplay>
+                        <source src="Untitled design.mp4" type="video/mp4">
+                    </video>
+                    <video class="mvid" src="mobileView.mp4" loop muted autoplay></video>
+                </div> 
+                
+                <div class="back"></div>
+
+                <div class="container11">
+                    <div class="dd">
+                    <h1>e4Healthcare</h1>
+                    <p class="goal"> Aged care staffing specialist in Western Australia, known for exceptional hospitality to both clients and staff.</p>
+                        <button onclick="contact()" class="join-us">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section data-aos="fade-up" class="mainSection">
+        <div class="headingTxt">
+            <h1>Our <span style="color: #14a0f7;">Services</span></h1>
+        </div>
+        <p>Our team of allied healthcare professionals offers specialized services tailored to meet a wide range of healthcare needs.</p>
+        <main class="m2">
+            <div class="servicesDiv">
+                <img src="Aged_care.jpg" alt="Aged Care Facilities and Hospitals">
+                <div class="card-content">
+                    <h3>Aged Care Residential Facilities and Hospitals</h3>
+                    <a href="servicesAged" class="read-more">Read more →</a>
+                </div>
+            </div>
+            <div class="servicesDiv">
+                <img src="community.jpg" alt="Community care / Respite support">
+                <div class="card-content">
+                    <h3>Community Care/Respite Support</h3>
+                    <a href="servicesComm" class="read-more">Read more →</a>
+                </div>
+            </div>
+            <div class="servicesDiv">
+                <img src="mental_care.jpg" alt="Mental health support programs">
+                <div class="card-content">
+                    <h3>Mental Health Support Programs</h3>
+                    <a href="servicesMental" class="read-more">Read more →</a>
+                </div>
+            </div>
+            <div class="servicesDiv">
+                <img src="disability_care.jpg" alt="Disability care support">
+                <div class="card-content">
+                    <h3>Disability Care Support</h3>
+                    <a href="serviceDisable" class="read-more">Read more →</a>
+                </div>
+            </div>
+            <div class="servicesDiv">
+                <img src="home_care.jpg" alt="Home care support">
+                <div class="card-content">
+                    <h3>Home Care Support</h3>
+                    <a href="servicesHome" class="read-more">Read more →</a>
+                </div>
+            </div>
+        </main>
+    </section>
+
+    <p data-aos="fade-right" class="oc">Our commitment is to provide exceptional care across all these specialty services, ensuring that every client receives the support they need to live a fulfilling life.</p>
+    <div data-aos="fade-right" class="contactUs">
+        <div class="contactUsDiv">
+            <h1>We Care with Love and Respect</h1>
+            <p>Our Team is Here To Help.</p>
+            <button onclick="contact()">Contact Us</button>
+        </div>
+    </div>
+
+    <section data-aos="fade-up" class="aboutUs">
+        <div class="aboutUsDiv">
+            <div class="abtTxt">
+                <h1>About <span style="color: #14a0f7;">Us</span></h1>
+                <p>At e4 Healthcare Services, we pride ourselves on being a premier staffing provider in Western Australia. Our commitment to exceptional hospitality extends to the clients under our care and our dedicated team members.
+                    Bridging Staffing Gaps for Aged Care Homes, Hospital, Disability Centres, and Community Homes.
+                    We understand the challenges faced by many healthcare providers in Perth and its environs. Finding qualified and competent workers on short notices can be a daunting task. That’s where e4 Healthcare Services steps in.</p>
+                <button onclick="abtUs()" class="abtCta">Read more</button>
+            </div>
+            <div class="abtImg"></div>
+        </div>
+    </section>
+
+
+
+    <section data-aos="fade-up" class="services__we__provide">
+        <header class="h_1">
+            <h1>Our services extend to include a variety of healthcare <span class="h11">professionals and support staff, such as:</span></h1>
+        </header>
+
+        <div class="service__div">
+            <div class="sDiv">
+                <img src="Registered Nurses2.jpg" alt="" width="200">
+                <h4>Registered Nurses</h4>
+            </div>
+            <div class="sDiv">
+                <img src="Clinic Nurses.jpg" alt="" width="200">
+                <h4>Clinic Nurses</h4>
+            </div>
+            <div class="sDiv">
+                <img src="Nurse Practitioners.jpg" alt="" width="200">
+                <h4>Nurse Practitioners</h4>
+            </div>
+            <div class="sDiv">
+                <img src="Enrolled Nurses.jpg" alt="" width="200">
+                <h4>Enrolled Nurses</h4>
+            </div>
+            <div class="sDiv">
+                <img src="Assistants in Nursing (Carers_ PCAΓÇÖs).jpg" alt="" width="200">
+                <h4>Assistants in Nursing</h4>
+                <p style="font-size: 12px;text-align: center;">(Carers/ Personal Care Assistants)</p>
+            </div>
+            <div class="sDiv">
+                <img src="Support Workers (Disability, Community and Mental health).jpg" alt="" width="200">
+                <h4>Support Workers</h4>
+                <p style="font-size: 12px;text-align: center;">(Specializing in Disability, Community and Mental health)</p>
+            </div>
+            <div class="sDiv">
+                <img src="Healthcare Endorsed Chefs and Cooks.jpg" alt="" width="200">
+                <h4>Healthcare Endorsed Chefs and Cooks</h4>
+            </div>
+            <div class="sDiv">
+                <img src="Catering Assistants.jpg" alt="" width="200">
+                <h4>Catering Assistants</h4>
+            </div>
+            <div class="sDiv">
+                <img src="Kitchen hands.jpg" alt="" width="200">
+                <h4>Kitchen hands</h4>
+            </div>
+            <div class="sDiv">
+                <img src="Cleaners.jpg" alt="" width="200">
+                <h4>Cleaners</h4>
+            </div>
+        </div>
+        <p class="sCta">Please note that our services are not confined to the above list, as we strive to cater to the comprehensive healthcare needs of our clients.</p>
+    </section>
+    
+    <footer>
+        <div class="footerContext">
+            <div class="services">
+                <img src="e4 original logo white.png" alt="" width="150">
+                <p>e4 Healthcare Services is dedicated to delivering outstanding services, ensuring comprehensive engagement with our clients and their families in every facet of their care. Our exceptional team is the cornerstone of our service, with their well-being and career progression being our priority. Our competitive edge is defined by the superior care we provide to our clients and their families and our unwavering commitment to our staff’s well-being and advancement.</p>
+            </div>
+            <div class="services">
+                <h2>Services</h2>
+                <hr>
+                <div class="fs">
+                    <a href="servicesAged">Aged Care Residential Facilities and Hospitals</a>
+                    <a href="servicesComm">Community Care/Respite Support</a>
+                    <a href="servicesHome">Home Care Support</a>
+                    <a href="servicesMental">Mental Health Support Programs</a>
+                    <a href="serviceDisable">Disability Care Support</a>
+                </div>
+            </div>
+            <div class="contact">
+                <h2>Contact</h2>
+                <hr>
+                <div class="fs">
+                    <p>For all staff bookings and general inquiries, please call 0411 156 749. Alternatively, you can email your request or inquiry to admin@e4healthcare.info. We’re here to assist you with your healthcare staffing needs.</p> <br>
+                    <p>Monday to Friday: 8:30am- 6pm</p> <br>
+                    <p>Monday to Sunday: 24-hour Staff Bookings Only</p>
+                </div>
+                <div class="links">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                    <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+        </div>  
+        <hr>
+        <div class="lstDiv">
+            <p>© Copyright 2024 | All Rights Reserved by e4Healthcare</p>
+        </div>
+    </footer>
+    
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

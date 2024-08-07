@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="shortcut icon" href="favicon (3).ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('v3_zFxt5n7gmDIsZJ');
+        })();
+    </script>
+</head>
+<body>
+
+    <!-- custom cursor  -->
+
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-trail"></div>
+
+    <!-- custom cursor -->
+
+
+    <nav id="navbar" class="navbar">
+        <a class="logo" href="/"><img src="e4 original logo.png" alt="" width="100"></a>
+
+        <div class="navLinks">
+            <a style="text-decoration: none;" href="/"><div class="link">Home</div></a>
+            <a style="text-decoration: none;" href="aboutUs"><div class="link">About Us</div></a>
+            <div onclick="serv()" class="link dropdown">Services
+                    <div class="dropdown-content">
+                        <a href="servicesAged">Aged care residential facility and hospitals</a>
+                        <a href="servicesComm">Community care/Respite support</a>
+                        <a href="servicesHome">Home care support</a>
+                        <a href="servicesMental"> Mental health support programs</a>
+                        <a href="serviceDisable"> Disability care support</a>
+                    </div>
+            </div>
+            <a style="text-decoration: none;" href="joinUs"><div class="link">Join Us</div></a>
+            <a style="text-decoration: none;" href="contact"><div style="color: #14a0f7;"  class="link">Contact Us</div></a>
+        </div>
+
+        <button onclick="dialNumber('0411156749')" class="red-button">0411 156 749</button>
+        
+        <i onclick="drpD()" class="fa-solid fa-bars" id="menu"></i>
+        <i onclick="drpU()" class="fa-solid fa-xmark" id="cancel"></i>
+
+    </nav>
+
+    <div id="drpdown" class="drpDiv">
+        <a style="text-decoration: none;color: var(--color2);" href="/"><div class="link">Home</div></a>
+        <a style="text-decoration: none;color: black;" href="aboutUs"><div class="link">About us</div></a>
+        <div onclick="drpdrp()" class="link">Services <i id="arrow" class="fa-solid fa-caret-down"></i></div>
+        <!-- <i class="fa fa-arrow-down" aria-hidden="true"></i> -->
+        <div id="drpdrp" class="drpdrp">
+            <a style="text-decoration: none;color: black;" href="servicesAged">Aged care residential facility <br> and hospitals</a>
+            <a style="text-decoration: none;color: black;" href="servicesComm">Community care/Respite support</a>
+            <a style="text-decoration: none;color: black;" href="servicesHome">Home care support</a>
+            <a style="text-decoration: none;color: black;" href="servicesMental"> Mental health support programs</a>
+            <a style="text-decoration: none;color: black;" href="serviceDisable"> Disability care support</a>
+        </div>
+        <a style="text-decoration: none;color: black;" href="joinUs"><div class="link">Join us</div></a>
+        <a style="text-decoration: none;color: black;" href="contact"><div class="link">Contact us</div></a>
+        <button onclick="dialNumber('0411156749')" class="red-button2">0411 156 749</button>
+    </div>
+    
+    <section class="__herosection"> 
+        <img src="contactus.jpg" alt="">
+        <div class="__txt">
+            <h1>Contact us</h1>
+        </div>
+    </section>
+
+    <section class="cont_act">
+        <div class="contact_div">
+            <h1>Get In Touch With Us For More Information</h1>
+            <p>To explore how our dedicated team at e4 Healthcare Services can contribute to the success of your esteemed organization, please reach out to us. We’re eager to discuss the unique ways we can support your healthcare staffing needs and goals.</p>
+            <div class="c_d">
+                <div onclick="sendEmail()">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>Email us: <br> admin@e4healthcare.info </p>
+                </div>
+                <div onclick="dialNumber('0411156749')">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>Call us: <br> 0411 156 749</p>
+                </div>
+            </div>
+        </div>
+        <div class="form">
+            <form id="contactForm">
+                <div class="ncc">
+                    <div class="name">
+                        <label for="name">Name*</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+            
+                    <div class="email">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+        
+                <div class="message">
+                    <label for="message">Message*</label> <br>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+        
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <!-- <div class="form" data-paperform-id="cx73tyda"></div><script>(function() {var script = document.createElement('script'); script.src = "https://paperform.co/__embed.min.js"; document.body.appendChild(script); })()</script> -->
+    </section>
+
+    <div class="map">
+        <h1>Visit us</h1>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d865828.2608997272!2d115.30207665805156!3d-32.03835726977349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2a32966cdb47733d%3A0x304f0b535df55d0!2sPerth%20WA%2C%20Australia!5e0!3m2!1sen!2sng!4v1718944021713!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+
+
+    <footer>
+        <div class="footerContext">
+            <div class="services">
+                <img src="e4 original logo white.png" alt="" width="150">
+                <p>e4 Healthcare Services is dedicated to delivering outstanding services, ensuring comprehensive engagement with our clients and their families in every facet of their care. Our exceptional team is the cornerstone of our service, with their well-being and career progression being our priority. Our competitive edge is defined by the superior care we provide to our clients and their families and our unwavering commitment to our staff’s well-being and advancement.</p>
+            </div>
+            <div class="services">
+                <h2>Services</h2>
+                <hr>
+                <div class="fs">
+                    <a href="servicesAged">Aged Care Residential Facilities and Hospitals</a>
+                    <a href="servicesComm">Community Care/Respite Support</a>
+                    <a href="servicesHome">Home Care Support</a>
+                    <a href="servicesMental">Mental Health Support Programs</a>
+                    <a href="serviceDisable">Disability Care Support</a>
+                </div>
+            </div>
+            <div class="contact">
+                <h2>Contact</h2>
+                <hr>
+                <div class="fs">
+                    <p>For all staff bookings and general inquiries, please call 0411 156 749. Alternatively, you can email your request or inquiry to admin@e4healthcare.info. We’re here to assist you with your healthcare staffing needs.</p> <br>
+                    <p>Monday to Friday: 8:30am- 6pm</p> <br>
+                    <p>Monday to Sunday: 24-hour Staff Bookings Only</p>
+                </div>
+                <div class="links">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                    <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+        </div>  
+        <hr>
+        <div class="lstDiv">
+            <p>© Copyright 2024 | All Rights Reserved by e4Healthcare</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="contact.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

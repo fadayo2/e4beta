@@ -1,0 +1,186 @@
+.__txt h1{
+    font-weight: 350;
+    font-size: calc(2.7vw + 2.7vh);
+}
+
+.navbar {
+    background-color: white;
+}
+
+.navLinks .link {
+    color: black;
+}
+
+.__herosection {
+    width: 100vw;
+    height: 75vh;
+    background-image: url(DISABILITYJJ.jpg);
+    background-size: cover;
+    margin-top: 6rem;
+}
+
+.__herosection .__txt {
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to right , rgba(0, 0, 0, 0.767) , rgba(0, 0, 0, 0.356) , rgba(0, 0, 0, 0) , rgba(0, 0, 0, 0));
+    display: flex;
+    align-items: center;
+    padding-left: 6rem;
+    padding-top: 10rem;
+    color: white;
+}
+
+.__herosection img {
+    display: none;
+}
+
+.main {
+    margin-bottom: 3rem;
+    height: fit-content;
+    width: initial;
+    /* border: 1px solid black; */
+    display: grid;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.maindiv {
+    height: fit-content;
+    width: 90vw;
+    /* border: 1px solid green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 3rem;
+    margin: auto;
+}
+
+.maindiv .im {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 10px solid var(--color3);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.maindiv img {
+    /* width: 100%; */
+    height: 100%;
+    object-fit: cover;
+}
+
+.mtt {
+    /* border: 1px solid red; */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.mtt hr {
+    width: 100%;
+}
+
+.mainTxt {
+    width: 680px;
+    height: fit-content;
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    /* flex-direction: column; */
+    color: #333333;
+    /* border: 1px solid; */
+    column-gap: .8rem;
+}
+
+.mainTxt h1 {
+    font-size: calc(1.15vw + 1.15vh);
+    font-weight: 500;
+    /* margin-bottom: 1.5rem; */
+}
+
+.mainTxt span {
+    font-size: calc(1.3vw + 1.3vh);
+}
+
+.mainTxt p {
+    font-size: 16px;
+}
+
+.mt {
+    flex-direction: row-reverse;
+}
+
+.mt .im {
+    border-color: rgb(0,115,183);
+}
+
+@media (max-width: 1024px) {
+    .__herosection {
+        height: 50vh;
+        background-size: cover;
+    }
+    .__herosection .__txt {
+        align-items: end;
+        justify-content: center;
+        padding-left: 0;
+        padding-top: 0;
+        height: 50vh;
+        padding-bottom: 6rem;
+    }
+    .main {
+        padding-left: 0;
+        gap: 3rem;
+    }
+    .maindiv {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: fit-content;
+        gap: 2rem;
+    }
+    .mainTxt {
+        width: 80vw;
+        margin: auto;
+    }
+    .maindiv img {
+        margin: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .__herosection {
+        position: relative;
+        background-image: none;
+        margin-top: 6rem;
+    }
+    .__herosection img {
+        display: block;
+        z-index: -10;
+        width: 100%;
+        height: inherit;
+        position: absolute;
+        object-fit: cover;
+    }
+    .maindiv .im {
+        width: 200px;
+        height: 200px;
+        margin: auto;
+        border-width: 5px;
+    }
+    .maindiv img {
+        margin: auto;
+        width: 100%;
+    }
+    .maindiv h1 {
+        font-size: calc(1.5vw + 1.5vh);
+    }
+}

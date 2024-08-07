@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard.css">
+    <title>Dashboard</title>
+</head>
+<body>
+
+    <!-- Login Screen -->
+    <div id="loginScreen" class="login-screen">
+        <div class="login-container">
+            <h2>Admin Login</h2>
+            <input type="password" id="adminPassword" placeholder="Enter Password">
+            <button id="loginButton">Login</button>
+            <p id="loginError" class="error-message"></p>
+        </div>
+    </div>
+
+        <main id="dashboard">
+            <div class="wrapper_inner">
+                <h2>Hello admin 👋🏼</h2>
+                <div class="box">
+                    <h3>All Applicants</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Applicant name</th>
+                                <th>Email</th>
+                                <th>Location</th>
+                                <th>Score</th>
+                                <th>Resume</th>
+                                <th>Time</th> <!-- New column for time -->
+                            </tr>
+                        </thead>
+                        <tbody id="client-table">
+                        </tbody>
+                    </table>
+                    <div id="loadingText" class="loader">Loading applicants...</div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal for displaying full information -->
+    <div id="detailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="applicantDetails"></div>
+            <button id="deleteApplicant">Delete Application</button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+
+</html>
