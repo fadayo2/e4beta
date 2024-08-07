@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         applicationDate: new Date().toLocaleDateString()
                     };
 
-                    await emailjs.send('service_cmsntb7', 'template_xqhzcza', templateParams);
+                    await emailjs.send('service_rj8onvp', 'template_xqhzcza', templateParams);
 
                     form.reset();
                     step1.classList.remove("active");

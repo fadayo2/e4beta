@@ -93,11 +93,11 @@ function dialNumber(number) {
 }
 
 function contact(){
-    location.href = 'contact';
+    location.href = 'contact.html';
 }
 
 function abtUs(){
-    location.href = 'aboutUs';
+    location.href = 'aboutUs.html';
 }
 
 function sendEmail() {
