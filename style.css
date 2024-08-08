@@ -248,7 +248,7 @@ body {
     padding-top: 5rem;
 }
 
-.container .dd {
+.container11 .dd {
     height: fit-content;
     width: 530px;
     display: flex;
@@ -263,10 +263,9 @@ body {
     font-weight: 300;
 }
 
-.container11 .dd p {
+.container11 .dd .goal {
     display: flex;
     font-size: 1.5vw; 
-    font-size: calc(1.2vw + 1.2vh);
     font-weight: light;
     color: white;
     font-smooth: always;
@@ -965,7 +964,7 @@ footer .footerContext {
         align-items: end;
         padding-bottom: 3rem;
     }
-    .container .dd p {
+    .container11 .dd p {
         font-size: 16px !important;
         text-align: center;
     }

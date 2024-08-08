@@ -14,16 +14,82 @@ document.addEventListener("DOMContentLoaded", function () {
     const container = document.getElementById("container");
 
     const correctAnswers = {
-        quiz1: "D",
-        quiz2: "D",
-        quiz3: "A",
-        quiz4: "D",
-        quiz5: "A",
-        quiz6: "C",
-        quiz7: "C",
-        quiz8: "B",
-        quiz9: "G",
-        quiz10: "D"
+        question1: "D",
+        question2: "D",
+        question3: "A",
+        question4: "D",
+        question5: "A",
+        question6: "C",
+        question7: "C",
+        question8: "B",
+        question9: "G",
+        question10: "D"
+    };
+
+    const answerMappings = {
+        question1: {
+            A: "Get consent to given care.",
+            B: "Ask questions.",
+            C: "Do not touch or move painful, injured areas on the body.",
+            D: "All of the above."
+        },
+        question2: {
+            A: "The person has a cough and runny nose.",
+            B: "The person has a stomachache that goes away.",
+            C: "The person has an earache.",
+            D: "The person has trouble breathing."
+        },
+        question3: {
+            A: "DRSABCD.",
+            B: "DRSABCE.",
+            C: "ABCDRSD.",
+            D: "DRSDABE."
+        },
+        question4: {
+            A: "The scene is becoming unsafe.",
+            B: "You need to reach another person with a more serious injury or illness.",
+            C: "You need to move a person to give emergency care.",
+            D: "All of the above."
+        },
+        question5: {
+            A: "Minimize the risk of disease transmission.",
+            B: "Reduce the number of times you need to wear gloves.",
+            C: "Increase the risk of disease transmission.",
+            D: "None of the above."
+        },
+        question6: {
+            A: "Lift the person.",
+            B: "Give the person CPR.",
+            C: "Tap the person and shout, 'Are you okay?'",
+            D: "Look, listen and feel for signs of breathing."
+        },
+        question7: {
+            A: "Give care and call 000.",
+            B: "Give care and do not call 000.",
+            C: "Do not give care but call 000 to attend.",
+            D: "None of the above."
+        },
+        question8: {
+            A: "Keep the person comfortable.",
+            B: "Give the person water.",
+            C: "Monitor the person’s ABCs.",
+            D: "Raise the person's legs 12 inches."
+        },
+        question9: {
+            A: "Healthcare workers, such as doctors and nurses.",
+            B: "Allied healthcare workers.",
+            C: "Office and clerical staff.",
+            D: "Cleaning and hospitality staff.",
+            E: "Contracted tradespeople.",
+            F: "Visitors.",
+            G: "All of the above."
+        },
+        question10: {
+            A: "At least 2 seconds.",
+            B: "At least 5 seconds.",
+            C: "At least 10 seconds.",
+            D: "At least 20 seconds."
+        }
     };
 
     nextStep1.addEventListener("click", function () {
@@ -95,8 +161,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const formValues = new FormData(form);
         let score = 0;
+        const selectedOptions = {};
+
         for (const [question, answer] of Object.entries(correctAnswers)) {
-            if (formValues.get(question) === answer) {
+            const selectedAnswer = formValues.get(question);
+            selectedOptions[question] = answerMappings[question][selectedAnswer];
+            if (selectedAnswer === answer) {
                 score++;
             }
         }
@@ -126,7 +196,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     role: formValues.get("role"),
                     score: score,
                     fileURL: fileURL,
-                    timestamp: timestamp
+                    timestamp: timestamp,
+                    selectedOptions: selectedOptions // Add selected options to dataToSend
                 };
 
                 try {
@@ -147,7 +218,8 @@ document.addEventListener("DOMContentLoaded", function () {
                         role: formValues.get("role"),
                         score: score,
                         fileURL: fileURL,
-                        applicationDate: new Date().toLocaleDateString()
+                        applicationDate: new Date().toLocaleDateString(),
+                        selectedOptions: JSON.stringify(selectedOptions) // Add selected options to templateParams
                     };
 
                     await emailjs.send('service_rj8onvp', 'template_xqhzcza', templateParams);
